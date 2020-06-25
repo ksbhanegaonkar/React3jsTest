@@ -1,0 +1,37 @@
+.task-bar {
+    position: fixed;
+    left: 15%;
+    bottom: 0;
+    width: 78%;
+    min-height: 5%;
+    align-items: center;
+    background-color: rgb(22, 1, 32);
+    color: white;
+    z-index: 9;
+ }
+ .os-info{
+     position: fixed;
+     right: 0;
+     font-size: 20px;
+     bottom: 10px;
+     color: rgb(116, 2, 255);
+
+ }
+
+ .developer{
+    position: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    right: 0px;
+    bottom: 2px;
+    font-size: 8px;
+    color: rgb(116, 2, 255);
+
+}
+
+.developer-info{
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+}
+
+

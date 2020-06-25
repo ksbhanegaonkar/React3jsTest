@@ -1,0 +1,25 @@
+
+    .Login {
+      padding: 60px 0;
+    }
+  
+    .Login form {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+
+.error-message{
+  color: red;
+}  
+
+.success-message{
+  color: rgb(43, 255, 0);
+}  
+
+.logging-in-message{
+  color: rgb(65, 252, 8);
+  position: absolute;
+  top:45% ;
+  left: 45%;
+  font-size: large;
+}  

@@ -1,0 +1,25 @@
+.user-console{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.user-console-label{
+    color: rgb(248, 174, 15);
+}
+
+.user-console-input{
+    margin-left: 20px;
+}
+
+.user-added-success-message{
+    color: green;
+}
+
+
+.user-added-error-message{
+    color: red;
+}
+
+.user-added-loading-message{
+    color: yellow;
+}

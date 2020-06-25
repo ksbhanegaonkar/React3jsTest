@@ -1,0 +1,43 @@
+.update-app-screen{
+  position: fixed;
+  top:0%;
+  height: 100%;
+  width: 100%;
+  background: rgba(12, 7, 7, 0.856);
+
+  z-index: 10;
+}
+
+.update-app-pannel{
+    position: absolute;
+    left: 37%;
+    top: 40%;
+    font-size: medium;
+}
+
+.update-app-error-message{
+    position: absolute;
+    color: red;
+    font-size: medium;
+  }  
+  .update-app-success-message{
+    position: absolute;
+    color: rgb(10, 190, 10);
+    font-size: medium;
+  }  
+
+  .update-app-loading-message{
+    position: absolute;
+    color: rgb(240, 236, 3);
+    font-size: medium;
+  }  
+
+
+  
+.loading-message{
+  color: green;
+  position: absolute;
+  top:45% ;
+  left: 45%;
+  font-size: large;
+}  
