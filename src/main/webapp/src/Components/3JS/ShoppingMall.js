@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import * as THREE from 'three';
+import * as OrbitControls from 'three-orbitcontrols';
 import './ShoppingMall.css';
 
 class ShoppingMall extends Component {
@@ -25,11 +26,15 @@ class ShoppingMall extends Component {
         )
         const renderer = new THREE.WebGLRenderer({ antialias: true })
         const geometry = new THREE.BoxGeometry(1, 1, 1)
-        const material = new THREE.MeshBasicMaterial({ color: '#433F81' })
+        const material = new THREE.MeshPhongMaterial({ color: '#433F81' })
         const cube = new THREE.Mesh(geometry, material)
     
+        const light = new THREE.SpotLight(0xffffff);
+        light.position.set(-100,200,100);
+
         camera.position.z = 4
         scene.add(cube)
+        scene.add(light)
         renderer.setClearColor('#000000')
         renderer.setSize(width, height)
     
@@ -38,6 +43,13 @@ class ShoppingMall extends Component {
         this.renderer = renderer
         this.material = material
         this.cube = cube
+
+        const controls = new OrbitControls(this.camera, this.renderer.domElement)
+        controls.enableDamping = true
+        controls.dampingFactor = 0.25
+        controls.enableZoom = false
+
+
     
         this.mount.appendChild(this.renderer.domElement)
         this.start()
@@ -59,8 +71,8 @@ class ShoppingMall extends Component {
       }
     
       animate() {
-        this.cube.rotation.x += 0.05
-        this.cube.rotation.y += 0.05
+        //this.cube.rotation.x += 0.05
+        //this.cube.rotation.y += 0.05
     
         this.renderScene()
         this.frameId = window.requestAnimationFrame(this.animate)
