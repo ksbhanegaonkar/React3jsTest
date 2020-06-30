@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import * as THREE from 'three';
+import './ShoppingMall.css';
 
 class ShoppingMall extends Component {
     constructor(props) {
@@ -58,8 +59,8 @@ class ShoppingMall extends Component {
       }
     
       animate() {
-        this.cube.rotation.x += 0.01
-        this.cube.rotation.y += 0.01
+        this.cube.rotation.x += 0.05
+        this.cube.rotation.y += 0.05
     
         this.renderScene()
         this.frameId = window.requestAnimationFrame(this.animate)
@@ -71,8 +72,7 @@ class ShoppingMall extends Component {
     
       render() {
         return (
-          <div
-            style={{ width: '400px', height: '400px' }}
+          <div className="main-window"
             ref={(mount) => { this.mount = mount }}
           />
         )
